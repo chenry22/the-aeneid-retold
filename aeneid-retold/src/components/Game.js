@@ -39,16 +39,17 @@ const Game = () => {
                 <button onClick={restartGame}>Restart Game</button>
             </center>
         ) : (
-            <>
-            <div className="history-container">
-                {history.map((scen, index) => (
-                    <StoryHistory key={index} scenario={scen.scenario} choice={scen.choice} includeChoice={scen.choice !== "Continue"}/>
-                ))}
-                <AlwaysScrollToBottom />
+            <div className='game-container'>
+                <div className="history-container">
+                    {history.map((scen, index) => (
+                        <StoryHistory key={index} scenario={scen.scenario} choice={scen.choice} includeChoice={scen.choice !== "Continue"}/>
+                    ))}
+                    <AlwaysScrollToBottom />
+                </div>
+                <div className='storyChoice'>
+                    <StoryChoice scenario={scenario} onChoice={handleChoice} onGameResult={handleGameResult} />
+                </div>
             </div>
-
-            <StoryChoice scenario={scenario} onChoice={handleChoice} onGameResult={handleGameResult} />
-            </>
         )}
         </>
     );

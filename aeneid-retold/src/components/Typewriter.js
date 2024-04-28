@@ -1,57 +1,71 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
-const Typewriter = ({ text, charDelay, sentenceDelay }) => {
+const Typewriter = ({ text, charDelay, sentenceDelay, completedType }) => {
     // text is an array of sentences
     const [currentText, setCurrentText] = useState('');
     const [currentIndex, setCurrentIndex] = useState(0);
     const [currSentence, setCurrentSentence] = useState(0);
     const [sentences, setSentences] = useState([]);
     const [usedCharDelay, setCharDelay] = useState(charDelay);
-    const [active, setActive] = useState(false);
+
+    const [timeoutActive, setSentTimeout] = useState(false);
+    const completed = useRef(false);
 
     function skipType(){
-        setCharDelay(10);
+        if(!completed.current){
+            setCharDelay(10);
+        }
     }
+
+    useEffect(() => {
+        let timer  = setTimeout(() => {
+            setSentTimeout(false);
+        }, sentenceDelay);
+        return () => clearTimeout(timer);
+    }, [timeoutActive, sentenceDelay])
 
     useEffect(() => {
         let timeout;
         
-        if (text[currSentence] != null && currentIndex < text[currSentence].length) {
-            setActive(true);
+        if (!timeoutActive && text[currSentence] != null && currentIndex < text[currSentence].length) {
+            completed.current = false;
             timeout = setTimeout(() => {
                 setCurrentText(prevText => prevText + text[currSentence][currentIndex]);
                 setCurrentIndex(prevIndex => prevIndex + 1);
             }, usedCharDelay);
-        } else if(currSentence <= text.length){
+        } else if(!timeoutActive && currSentence < text.length){
             // when sentence finished
-            setActive(true);
+            completed.current = false;
             sentences.push(currentText);
             setCurrentSentence(prev => prev + 1);
             setCurrentText("");
             setCurrentIndex(0);
             setCharDelay(charDelay);
-
-            timeout = setTimeout(() => {}, sentenceDelay);
-        } else{
+            if(currSentence < text.length){
+                setSentTimeout(true);
+            }
+        } else if(currSentence >= text.length){
             setCurrentText("");
+            completed.current = true;
+            completedType(true);
         }
     
         return () => clearTimeout(timeout);
-    }, [currentIndex, currSentence, usedCharDelay, active, charDelay, sentenceDelay, text, currentText, sentences]);
+    }, [currentIndex, currSentence, usedCharDelay, timeoutActive,
+        charDelay, sentenceDelay, text, currentText, sentences, completedType]);
   
     useEffect(() => {
-        setActive(true);
         setCurrentText('');
         setCurrentIndex(0);
         setCurrentSentence(0);
         setSentences([]);
         setCharDelay(charDelay);
-    }, [text, charDelay, active])
+    }, [text, charDelay])
 
     return (
         <span onClick={skipType}>
             {sentences.map((txt, index) => (
-                <p key={index}>{txt}</p>
+                <p key={index}>{txt} </p>
             ))}
             <p>{currentText}</p>
         </span>

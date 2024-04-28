@@ -4,6 +4,8 @@ import Game from './components/Game';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 
+import map from "./img/blank_map.png";
+
 function App() {
   const [startGame, setStart] = useState(false);
 
@@ -12,12 +14,18 @@ function App() {
   };
 
   const endGame = () => {
-    setStart(false);
+    if(window.confirm("Are you sure?")){
+      setStart(false);
+    }
   }
 
   return (
     <>
     {startGame ? (
+      <>
+      <div className='background'>
+        <img src={map} alt="map"></img>
+      </div>
       <div className="container">
         <div className="gameHeader">
           <h2>The Aeneid: Retold</h2>
@@ -25,9 +33,9 @@ function App() {
         <div className="game">
           <Game />
         </div>
-        <br></br>
-        <Button variant="outline-info" size="sm" onClick={endGame}>Back to Main</Button>
+        <Button variant="info" size="sm" onClick={endGame}>Back to Main</Button>
       </div>
+      </>
     ) : (
       <div className="beginScreen">
         <h1>The Aeneid: Retold</h1>
