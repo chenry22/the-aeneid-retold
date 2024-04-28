@@ -1,0 +1,76 @@
+{
+    "book1": [
+        {
+            "id": 0,
+            "text": ["Storm clouds gather above your fleet. As the rain begins to trickle down, you are filled with a sense of dread...",
+                "The storm breaks- winds billow about (ETC)"],
+            "choices": [
+                {"text": "Fight the storm", "nextScenario": 1},
+                {"text": "Try to sail to safety", "nextScenario": 1}
+            ]
+        },
+        {
+            "id": 1,
+            "text": ["You give a valiant effort, but the storm overpowers you.",
+                    "Your ships are flung about, waves crash all around you. You watch as a wall of water rises and engulfs a nearby ship, sinking it under the stormy waters...",
+                    "Then, as suddenly as it had started, the sea calms. The waves relent and lead you to a nearby shore. You land the remaining ships and your people gather around you."],
+            "choices": [
+                {"text": "Muster up an inspiring speech", "nextScenario": 2},
+                {"text": "Tell them to rest- you'll need to move forward soon", "nextScenario": 3}
+            ]
+        },
+        {
+            "id": 2,
+            "text": ["SPEECH"],
+            "choices": [
+                {"text": "Continue", "nextScenario": 4}
+            ]
+        },
+        {
+            "id": 3,
+            "text": ["Get some rest guys..."],
+            "choices": [
+                {"text": "Continue", "nextScenario": 4}
+            ]
+        },
+        {
+            "id": 4,
+            "text": ["You set up camp on the shore and sleep.",
+                    "Dawn metaphor. Meet Venus disguised.",
+                    "Something is strange about this person..."],
+            "choices": [
+                {"text": "Hey you look very godly for a normal person...", "nextScenario": 5},
+                {"text": "Threaten for info", "nextScenario": 6},
+                {"text": "Flee from the encounter", "nextScenario": 7}
+            ]
+        },
+        {
+            "id": 5,
+            "text": ["\"You must be a goddess disguised... No mortal has such a face or voice.\"",
+                    "\"Please, have compassion, and tell me where our misfortune has landed us.\"",
+                    "\"In return, I promise you many sacrifices.\""],
+            "choices": [
+                {"text": "Continue", "nextScenario": 8}
+            ]
+        },
+        {
+            "id": 8,
+            "text": ["\"I would not be deserving of such offerings\", the girl replies.",
+                    "\"You have landed in... (etc)\"",
+                    "Story of queen Dido"],
+            "choices": [
+                {"text": "Continue", "nextScenario": 4}
+            ]
+        }
+    ],
+    "book2": [
+        {
+
+        }
+    ],
+    "book3": [
+        {
+
+        }
+    ]
+}
