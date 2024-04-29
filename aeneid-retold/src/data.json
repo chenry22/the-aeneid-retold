@@ -40,8 +40,8 @@
                     "Something is strange about this person..."],
             "choices": [
                 {"text": "Hey you look very godly for a normal person...", "nextScenario": 5},
-                {"text": "Threaten for info", "nextScenario": 6},
-                {"text": "Flee from the encounter", "nextScenario": 7}
+                {"text": "Threaten for info", "nextScenario": 0},
+                {"text": "Flee from the encounter", "nextScenario": 0}
             ]
         },
         {
@@ -50,16 +50,59 @@
                     "\"Please, have compassion, and tell me where our misfortune has landed us.\"",
                     "\"In return, I promise you many sacrifices.\""],
             "choices": [
+                {"text": "Continue", "nextScenario": 6}
+            ]
+        },
+        {
+            "id": 6,
+            "text": ["\"I would not be deserving of such offerings\", the girl replies.",
+                    "\"You have landed in Carthage (etc)\"",
+                    "Dido is our queen... whose story i will briefly tell"],
+            "choices": [
+                {"text": "Continue", "nextScenario": 7}
+            ]
+        },
+        {
+            "id": 7,
+            "text": ["Story of Dido",
+                    "\"But who are you? What country do you come from? Where are you going?\""],
+            "choices": [
                 {"text": "Continue", "nextScenario": 8}
             ]
         },
         {
             "id": 8,
-            "text": ["\"I would not be deserving of such offerings\", the girl replies.",
-                    "\"You have landed in... (etc)\"",
-                    "Story of queen Dido"],
+            "text": ["im Aeneas from Troy (you mightve heard of it). A storm has forced us to these shores...",
+                    "\"I can assure you, the favor of the gods has brought you here. Go on from here to the queen's home, you'll find your lost comrades and ships safe.\""],
             "choices": [
-                {"text": "Continue", "nextScenario": 4}
+                {"text": "Listen and visit Dido", "nextScenario": 9},
+                {"text": "Go back to the shore where you left your fleet", "nextScenario": 10}
+            ]
+        },
+        {
+            "id": 9,
+            "text": ["You decide to follow her advice and visit the Carthaginian queen. As the young girl turns to leave, her form changes into that of a true god.",
+                    "You recognize her as Venus, your mothrr. You call out to her, but she has already disappeared.",
+                    "Frustrated by the trick, you walk towards the city's walls."],
+            "choices": [
+                {"text": "Continue", "nextScenario": 10}
+            ]
+        },
+        {
+            "id": 10,
+            "text": ["You walk through the city (describe) [shrouded in Venus' cloud]",
+                    "As you approach the palace doors, you see Dido herself, followed by a 'large and youthful troop'.",
+                    "You recognize some faces that had been whisked away by the storm. Waiting by the entrace, you hear the lost Trojans plead their case with Dido, sharing the story of their sacked city and the long voyage they'd endured."],
+            "choices": [
+                {"text": "Continue", "nextScenario": 11}
+            ]
+        },
+        {
+            "id": 11,
+            "text": ["Dido listens and tells them to calm themselves. She promises support for the Trojans, either to help send them away or build a new life in Carthage.",
+                    "\"I wish the storm had brought your King Aeneas himself- I will send some men to search for him.\""],
+            "choices": [
+                {"text": "Continue", "nextScenario": 8}
             ]
         }
     ],

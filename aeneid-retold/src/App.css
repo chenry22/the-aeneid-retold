@@ -1,19 +1,41 @@
+body {
+    pointer-events: none;
+}
+
+#root {
+    width: 55%;
+    margin: 0 auto;
+}
+
 .gameHeader {
     padding-bottom: 10px;
 }
 
-.background img{
+.background {
+    pointer-events: all;
+}
+
+.background div {
     display: block;
     z-index: -1;
     position: fixed;
     left: 0;
     right: 0;
-    width: 100vw;
-    margin: 0 auto;
+
+    width: 100%;
+    height: 100%;
+}
+
+.background img {
+    width: 100%;
+    height: auto;
+
+    max-height: 140%;
 }
 
 .beginScreen {
     text-align: center;
+    pointer-events: all;
 }
 
 .game {
@@ -24,7 +46,7 @@
 
 .history-container {
     display: flex;
-    width: 70vw;
+    width: 100%;
     max-height: 50vh;
     flex-direction: column;
     align-items: center;
@@ -37,6 +59,9 @@
     text-align: center;
     background-color: rgba(248, 214, 214, 0.9);
     padding: 20px 0;
+    width: 100px;
+
+    pointer-events: all;
 }
 
 .story-node {
@@ -59,7 +84,6 @@
     display: flex;
     flex-direction: row;
     align-items: stretch;
-
     margin-top: 20px;
 }
 
@@ -73,10 +97,11 @@
     transition: opacity 1s;
 }
 
-.choices div {
+.choice-item {
     display: flex;
     margin: 3px;
     flex: 1;
+    justify-content: center;
 }
 
 .storyChoice p {

@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Game from './components/Game';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
+import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 
 import map from "./img/blank_map.png";
 
@@ -24,8 +25,13 @@ function App() {
     {startGame ? (
       <>
       <div className='background'>
-        <img src={map} alt="map"></img>
+        <TransformWrapper limitToBounds={true} disablePadding={true}>
+          <TransformComponent>
+            <img src={map} alt="map"></img>
+          </TransformComponent>
+        </TransformWrapper>
       </div>
+
       <div className="container">
         <div className="gameHeader">
           <h2>The Aeneid: Retold</h2>
