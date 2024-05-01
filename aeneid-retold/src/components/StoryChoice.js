@@ -3,9 +3,8 @@ import data from '../data.json';
 import Button from 'react-bootstrap/Button';
 import Typewriter from "./Typewriter";
 
-const StoryChoice = ({ scenario, onChoice, onGameResult }) => {
-	// TODO: implement typing effect
-	const scenarios = data.book1;
+const StoryChoice = ({ scenario, onChoice, bookNum }) => {
+	const scenarios = data["book" + bookNum];
 	const currentScenario = scenarios[scenario];
 	const [completed, setCompleted] = useState(false);
 
@@ -21,7 +20,7 @@ const StoryChoice = ({ scenario, onChoice, onGameResult }) => {
 
 	// TODO: fix Continue button showing up too early
 	return (
-		<div className="container" style={{ maxWidth: '500px' }}>
+		<div className="choice-container" style={{ maxWidth: '500px' }}>
 			<div className="story-body">
 				<Typewriter completedType={completedType} text={ currentScenario.text } charDelay={50} sentenceDelay={500}/>
 				<div className={completed ? "choices fadeIn" : "choices fadeOut"}>

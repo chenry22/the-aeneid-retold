@@ -22,7 +22,7 @@ function App() {
 
   return (
     <>
-    {startGame ? (
+    {startGame &&
       <>
       <div className='background'>
         <TransformWrapper limitToBounds={true} disablePadding={true}>
@@ -42,12 +42,14 @@ function App() {
         <Button variant="info" size="sm" onClick={endGame}>Back to Main</Button>
       </div>
       </>
-    ) : (
+    }
+
+    {!startGame && 
       <div className="beginScreen">
         <h1>The Aeneid: Retold</h1>
         <Button onClick={beginGame}>Begin</Button>
       </div>
-    )}
+    }
     </>
 )}
 

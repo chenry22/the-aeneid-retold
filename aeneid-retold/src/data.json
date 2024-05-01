@@ -1,108 +1,228 @@
 {
+    "mid0": [
+        "Past are the days of Troy's mighty walls...",
+        "Ten years of war brought only misery and loss for the Ilians. Now only echoes linger of the once unconquerable nation, reverberating all across the earth.",
+        "But amidst the crumbling ruins and fading memories, a great leader will emerge, one whose destiny is woven from Troy's great legacy.",
+        "Son of Venus, great forefather of the Roman Empire, this is the story of",
+        "Aeneas"
+    ], 
     "book1": [
         {
             "id": 0,
+            "fx": "rain",
             "text": ["Storm clouds gather above your fleet. As the rain begins to trickle down, you are filled with a sense of dread...",
-                "The storm breaks- winds billow about (ETC)"],
+                "All at once the storm breaks- winds billow about, hoping to force you overboard.",
+                "Your crew desperately fights to keep their ships under control, looking to you for guidance."],
             "choices": [
-                {"text": "Fight the storm", "nextScenario": 1},
+                {"text": "Try and fight the storm", "nextScenario": 1},
                 {"text": "Try to sail to safety", "nextScenario": 1}
             ]
         },
         {
             "id": 1,
             "text": ["You give a valiant effort, but the storm overpowers you.",
-                    "Your ships are flung about, waves crash all around you. You watch as a wall of water rises and engulfs a nearby ship, sinking it under the stormy waters...",
-                    "Then, as suddenly as it had started, the sea calms. The waves relent and lead you to a nearby shore. You land the remaining ships and your people gather around you."],
+                    "Your fleet is flung about, waves crash all around you. You watch as a wall of water rises and engulfs a nearby ship, sinking it under the darkened waters.",
+                    "You lose all control- you can only watch helplessly as the gales force your ships into all different directions. Your own boat continues to groan under the strain of the elements."],
             "choices": [
-                {"text": "Muster up an inspiring speech", "nextScenario": 2},
-                {"text": "Tell them to rest- you'll need to move forward soon", "nextScenario": 3}
+                {"text": "Continue", "nextScenario": 2}
             ]
         },
-        {
+        {   
             "id": 2,
-            "text": ["SPEECH"],
+            "text": ["Then, as suddenly as they had angered, the winds calm.",
+                    "The waters relent and guide you to a nearby shore. You land the remaining ships and your people gather around you."],
             "choices": [
-                {"text": "Continue", "nextScenario": 4}
+                {"text": "Muster up an inspiring speech", "nextScenario": 3},
+                {"text": "Tell them to rest- you'll need to move on soon", "nextScenario": 4}
             ]
         },
         {
             "id": 3,
-            "text": ["Get some rest guys..."],
+            "fx": "shore",
+            "text": ["\"My friends, we are no strangers to suffering. But know that the gods hold us in their favor.\"",
+                    "\"With their help we will surely persevere to Latium and build a new Trojan kingdom.\"",
+                    "\"Until then we must endure our fortune and have faith that it will change.\""],
             "choices": [
-                {"text": "Continue", "nextScenario": 4}
+                {"text": "Continue", "nextScenario": 5}
             ]
         },
         {
             "id": 4,
-            "text": ["You set up camp on the shore and sleep.",
-                    "Dawn metaphor. Meet Venus disguised.",
-                    "Something is strange about this person..."],
+            "fx": "shore",
+            "text": ["\"Rest well tonight- we have found ourselves on unknown shores and must stay on guard.\"",
+                    "\"We cannot lose sight of our destiny, and we must leave as soon as possible.\""],
             "choices": [
-                {"text": "Hey you look very godly for a normal person...", "nextScenario": 5},
-                {"text": "Threaten for info", "nextScenario": 0},
-                {"text": "Flee from the encounter", "nextScenario": 0}
+                {"text": "Continue", "nextScenario": 5}
             ]
         },
         {
             "id": 5,
-            "text": ["\"You must be a goddess disguised... No mortal has such a face or voice.\"",
-                    "\"Please, have compassion, and tell me where our misfortune has landed us.\"",
-                    "\"In return, I promise you many sacrifices.\""],
+            "fx" : "forest",
+            "text": ["You set up camp on the shore and sleep. Once dawn breaks, you decide to scout out the surrounding area, which looks wild.",
+                    "Deep in the woods you come across a young huntress, a bow slung over her shoulder.",
+                    "\"Please, have you come across one of my sisters? She has a quiver and is wearing a spotted lynx skin and a belt.\""],
             "choices": [
-                {"text": "Continue", "nextScenario": 6}
+                {"text": "You sense something strange about her...", "nextScenario": 6},
+                {"text": "Threaten her for information", "nextScenario": 18},
+                {"text": "Flee from the strange encounter", "nextScenario": 20}
             ]
         },
         {
             "id": 6,
-            "text": ["\"I would not be deserving of such offerings\", the girl replies.",
-                    "\"You have landed in Carthage (etc)\"",
-                    "Dido is our queen... whose story i will briefly tell"],
+            "text": ["\"No, I haven't seen or heard your companion. But- what are you? No mortal has such a voice or face.\"",
+                    "\"Please goddess, have compassion, and tell me where misfortune has landed my people.\"",
+                    "\"I promise you many sacrifices at your altar.\""],
             "choices": [
                 {"text": "Continue", "nextScenario": 7}
             ]
         },
         {
             "id": 7,
-            "text": ["Story of Dido",
-                    "\"But who are you? What country do you come from? Where are you going?\""],
+            "text": ["\"Surely I would not be deserving of such offerings\", the girl replies.",
+                    "\"But I can tell you where you've landed. You are in Punic territory, surrounded by many unconquerable African cities.\"",
+                    "\"We are led by queen Dido- whose story I can briefly share with you.\""],
             "choices": [
                 {"text": "Continue", "nextScenario": 8}
             ]
         },
         {
             "id": 8,
-            "text": ["im Aeneas from Troy (you mightve heard of it). A storm has forced us to these shores...",
-                    "\"I can assure you, the favor of the gods has brought you here. Go on from here to the queen's home, you'll find your lost comrades and ships safe.\""],
+            "text": ["\"She was originally Phoenician, married to wealthy Sychaeus. Her brother, king Pygmalion, murdered Sychaeus out of greed. In a dream her husband revealed to her a secret treasure and urged her to escape.\"",
+                    "\"Gathering the wealth and any friends who wished to join her, she left her home to found this rising city of Carthage.\"",
+                    "\"But who are you? What country do you come from and where are you going?\""],
             "choices": [
-                {"text": "Listen and visit Dido", "nextScenario": 9},
-                {"text": "Go back to the shore where you left your fleet", "nextScenario": 10}
+                {"text": "Continue", "nextScenario": 9}
             ]
         },
         {
             "id": 9,
-            "text": ["You decide to follow her advice and visit the Carthaginian queen. As the young girl turns to leave, her form changes into that of a true god.",
-                    "You recognize her as Venus, your mothrr. You call out to her, but she has already disappeared.",
-                    "Frustrated by the trick, you walk towards the city's walls."],
+            "text": ["\"I am Aeneas, my people are from the ancient city of Troy. A storm has forced us to these shores as we seek Italy, our ancestors' homeland.\"",
+                    "The huntress carefully responds: \"I can assure you, the favor of the gods has brought you here. My parents taught me to read the skies, and the birds above give good omens! Go to the queen's home, you'll find your lost comrades there and their ships safe.\""],
+            "choices": [
+                {"text": "Listen and visit Dido", "nextScenario": 10},
+                {"text": "Go back to the shore where you left your fleet", "nextScenario": 22}
+            ]
+        },
+        {
+            "id": 10,
+            "text": ["You decide to follow her advice and visit the Carthaginian queen. As the girl turns to leave, she changes into the form of a true god.",
+                    "You recognize Venus, your mother. You call out to her, but she has already disappeared.",
+                    "Frustrated by the trick, you walk towards the city's walls. As you do, a thick cloud comes down to cover you, hiding you from any interference."],
             "choices": [
                 {"text": "Continue", "nextScenario": 10}
             ]
         },
         {
-            "id": 10,
-            "text": ["You walk through the city (describe) [shrouded in Venus' cloud]",
-                    "As you approach the palace doors, you see Dido herself, followed by a 'large and youthful troop'.",
+            "id": 11,
+            "text": ["You walk through the city, shrouded in Venus' mist. The bustling city boasts many construction projects, and already their walls seem tall and powerful.",
+                    "As you approach a great temple to Juno, you see Dido herself, followed by a large procession of young men.",
                     "You recognize some faces that had been whisked away by the storm. Waiting by the entrace, you hear the lost Trojans plead their case with Dido, sharing the story of their sacked city and the long voyage they'd endured."],
             "choices": [
-                {"text": "Continue", "nextScenario": 11}
+                {"text": "Continue", "nextScenario": 12}
             ]
         },
         {
-            "id": 11,
+            "id": 12,
             "text": ["Dido listens and tells them to calm themselves. She promises support for the Trojans, either to help send them away or build a new life in Carthage.",
-                    "\"I wish the storm had brought your King Aeneas himself- I will send some men to search for him.\""],
+                    "\"I only wish the storm had brought your king Aeneas himself- I will send some men to search for him.\""],
             "choices": [
-                {"text": "Continue", "nextScenario": 8}
+                {"text": "Reveal yourself", "nextScenario": 13},
+                {"text": "Go back to the shores", "nextScenario": 13}
+            ]
+        },
+        {
+            "id": 13,
+            "text": ["Without warning, the cloud covering you rips apart, revealing you to the queen and her visitors.",
+                    "Surprised for only a moment, you speak: \"Here I am, saved from the relentless sea.\"",
+                    "\"You are the first to pity us, the scraps left behind by the Greeks. Our people are eternally grateful for your selflessness, and surely the gods and your own conscience will reward you for such an act.\""],
+            "choices": [
+                {"text": "Continue", "nextScenario": 14}
+            ]
+        },
+        {
+            "id": 14,
+            "text": ["Still amazed at your sudden appearance, the queen watches in silence as you re-unite with your lost men. Finally, she speaks to you:",
+                    "\"I can only imagine what cruel fate has hounded you through endless dangers. I have heard of you before, from Greek kings and warriors who fought at Troy and who admire your ancient lineage.\"",
+                    "\"I am no stranger to suffering myself, such a life has taught me compassion. Please, have you and your men join me for a feast at the palace!\""],
+            "choices": [
+                {"text": "Accept the invitation", "nextScenario": 15},
+                {"text": "Return to the shores and the rest of your men", "nextScenario": 23}
+            ]
+        },
+        {
+            "id": 15,
+            "text": ["You accept, following Dido as she gives sacrifices at different temples, eventually leading you to a regal dining hall.",
+                    "You tell one of your men to go back to your ships and bring your son to the palace, along with gifts for the queen."],
+            "choices": [
+                {"text": "Continue", "nextScenario": 16}
+            ]
+        },
+        {
+            "id": 16,
+            "text": ["Your son, Ascanius, arrives, and the feast begins. The queen offers up a speech:",
+                    "\"They say Jupiter is the god of guests- let him make this a good day for our new Trojan friends! Joyful Bacchus, good Juno, let this union be the beginning of many good things to come!\""],
+            "choices": [
+                {"text": "Continue", "nextScenario": 17}
+            ]
+        },
+        {
+            "id": 17,
+            "text": ["As the night goes on, Dido continues to draw closer to you.",
+                    "She asks you about your past- stories of Priam, Hector, and Achilles. \"Tell me everything, from the start- the war, your city's fall, your wanderings across the earth. Please, share with us your story!\"",
+                    "Now all the feast's attendants have turned to look at you, expectantly."],
+            "choices": [
+                {"text": "Tell about the Fall of Troy", "nextScenario": -1}
+            ]
+        },
+        {
+            "id": 18,
+            "text": ["\"I've not seen anyone, but you should worry about yourself.\"",
+                    "You draw your sword. \"Tell me, what place is this- what people live here? Answer or you may never be re-united with your companion again.\""],
+            "choices": [
+                {"text": "Continue", "nextScenario": 19}
+            ]
+        },
+        {
+            "id": 19,
+            "text": ["She stares at you, devoid of any fear. Her eyes are piercing, and you are overwhelmed by the sense that you've made a mistake.",
+                    "\"You are in Punic territory, surrounded by many unconquerable African cities. Queen Dido is our ruler, a Phoenician who fled her native land to found this city.\"",
+                    "She pauses, before continuing, \"She is be expecting you. I would advise you to pay her a visit.\""],
+            "choices": [
+                {"text": "Listen and visit Dido", "nextScenario": 10},
+                {"text": "Go back to the shore where you left your fleet", "nextScenario": 21}
+            ]
+        },
+        {
+            "id": 20,
+            "text": ["You have a strange feeling about this encounter.",
+                    "You slowly back away from the huntress, before turning and running back to your ships and the shore."],
+            "choices": [
+                {"text": "Continue", "nextScenario": 21}
+            ]
+        },
+        {
+            "id": 21,
+            "text": ["Your crew is happy to see you return. You begin to set up camp on the shoreline- it will take some time to repair your damaged ships.",
+                    "Over the next weeks, your progress slowly continues. Your days are spent toiling under the sun, your nights are plagued by dreams and omens.",
+                    "On one particularly restless night, you find yourself back within Ilium's walls, at the beginning of the end."],
+            "choices": [
+                {"text": "Dream of the Fall of Troy", "nextScenario": -1}
+            ]
+        },
+        {
+            "id": 22,
+            "text": ["You thank her for her advice, but explain to her that you need to get back to your wrecked ships. You tell her you don't plan on staying here any longer than you need to.",
+                    "She gives you a reluctant farewell and you go your separate ways."],
+            "choices": [
+                {"text": "Continue", "nextScenario": 21}
+            ]
+        },
+        {
+            "id": 23,
+            "text": ["You thank the queen for her hospitality, but explain to her that you need to get back to your wrecked ships. You tell her you can't stay in Carthage any longer than you have to.",
+                    "She wishes you well and you lead your lost men back to be re-united with their companions."],
+            "choices": [
+                {"text": "Continue", "nextScenario": 21}
             ]
         }
     ],

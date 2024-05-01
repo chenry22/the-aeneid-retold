@@ -1,13 +1,13 @@
 import React, { useState, useRef, useEffect } from 'react';
 import StoryChoice from './StoryChoice';
 import StoryHistory from './StoryHistory';
+import MidScene from './MidScene';
 
 const Game = () => {
-    // var bookNum = 1;
     const [history, setHistory] = useState([]);
-
+    const [bookNum, setBookNum] = useState(0);
     const [scenario, setScenario] = useState(0);
-    const [gameResult, setGameResult] = useState(null);
+    const [midSceneHappening, setMidScene] = useState(true);
  
     const handleChoice = (choice) => {
         if (choice.nextScenario !== undefined) {
@@ -15,16 +15,13 @@ const Game = () => {
             setScenario(choice.nextScenario);
         }
     };
- 
-    const restartGame = () => {
-        setScenario(0);
-        setGameResult(null);
+
+    const handleMidSceneEnd = () => {
         setHistory([]);
-    };
- 
-    const handleGameResult = (result) => {
-        setGameResult(result);
-    };
+        setScenario(0);
+        setBookNum(prev => prev + 1);
+        setMidScene(false);
+    }
 
     const AlwaysScrollToBottom = () => {
         const elementRef = useRef();
@@ -34,20 +31,18 @@ const Game = () => {
  
     return (
         <>
-        {gameResult ? (
-            <center>
-                <button onClick={restartGame}>Restart Game</button>
-            </center>
+        {midSceneHappening ? (
+            <MidScene book={bookNum} onEnd={handleMidSceneEnd}/>
         ) : (
             <div className='game-container'>
                 <div className="history-container">
                     {history.map((scen, index) => (
-                        <StoryHistory key={index} scenario={scen.scenario} choice={scen.choice} includeChoice={scen.choice !== "Continue"}/>
+                        <StoryHistory book={bookNum} key={index} scenario={scen.scenario} choice={scen.choice} includeChoice={scen.choice !== "Continue"}/>
                     ))}
                     <AlwaysScrollToBottom />
                 </div>
                 <div className='storyChoice'>
-                    <StoryChoice scenario={scenario} onChoice={handleChoice} onGameResult={handleGameResult} />
+                    <StoryChoice scenario={scenario} onChoice={handleChoice} bookNum={bookNum}/>
                 </div>
             </div>
         )}
