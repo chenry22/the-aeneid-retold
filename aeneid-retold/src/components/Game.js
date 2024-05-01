@@ -23,6 +23,10 @@ const Game = () => {
         setMidScene(false);
     }
 
+    const onBookEnd = () => {
+        setMidScene(true);
+    }
+
     const AlwaysScrollToBottom = () => {
         const elementRef = useRef();
         useEffect(() => elementRef.current.scrollIntoView());
@@ -42,7 +46,7 @@ const Game = () => {
                     <AlwaysScrollToBottom />
                 </div>
                 <div className='storyChoice'>
-                    <StoryChoice scenario={scenario} onChoice={handleChoice} bookNum={bookNum}/>
+                    <StoryChoice scenario={scenario} onChoice={handleChoice} bookNum={bookNum} bookEnd={onBookEnd}/>
                 </div>
             </div>
         )}
