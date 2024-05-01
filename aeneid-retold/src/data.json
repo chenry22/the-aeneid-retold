@@ -62,9 +62,9 @@
                     "Deep in the woods you come across a young huntress, a bow slung over her shoulder.",
                     "\"Please, have you come across one of my sisters? She has a quiver and is wearing a spotted lynx skin and a belt.\""],
             "choices": [
-                {"text": "You sense something strange about her...", "nextScenario": 6},
+                {"text": "You sense something strange about her", "nextScenario": 6},
                 {"text": "Threaten her for information", "nextScenario": 18},
-                {"text": "Flee from the strange encounter", "nextScenario": 20}
+                {"text": "Flee from the encounter", "nextScenario": 20}
             ]
         },
         {
@@ -225,6 +225,10 @@
                 {"text": "Continue", "nextScenario": 21}
             ]
         }
+    ],
+    "mid1": [
+        "Book 2",
+        "The Fall of Troy"
     ],
     "book2": [
         {

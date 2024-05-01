@@ -32,14 +32,14 @@ function App() {
         </TransformWrapper>
       </div>
 
-      <div className="container">
+      <div className="top-container">
         <div className="gameHeader">
           <h2>The Aeneid: Retold</h2>
         </div>
         <div className="game">
           <Game />
+          <Button variant="info" size="sm" onClick={endGame}>Back to Main</Button>
         </div>
-        <Button variant="info" size="sm" onClick={endGame}>Back to Main</Button>
       </div>
       </>
     }

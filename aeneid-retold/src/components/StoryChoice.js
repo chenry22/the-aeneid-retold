@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import data from '../data.json';
 import Button from 'react-bootstrap/Button';
 import Typewriter from "./Typewriter";
@@ -13,24 +13,28 @@ const StoryChoice = ({ scenario, onChoice, bookNum }) => {
 		onChoice(choice);
 	};
 
-	function completedType(childSignal){
+	const completedType = (childSignal) => {
 		// fade in buttons
 		setCompleted(childSignal);
 	}
 
-	// TODO: fix Continue button showing up too early
+	useEffect(() => {
+		// make sure to reset fading effect appropriately
+		setCompleted(false);
+	}, [scenario, onChoice, bookNum])
+
 	return (
-		<div className="choice-container" style={{ maxWidth: '500px' }}>
+		<div className="choice-container">
 			<div className="story-body">
 				<Typewriter completedType={completedType} text={ currentScenario.text } charDelay={50} sentenceDelay={500}/>
-				<div className={completed ? "choices fadeIn" : "choices fadeOut"}>
+				<ul className={completed ? "choices fadeIn" : "choices fadeOut"}>
 					{completed && currentScenario.choices.map((choice, index) => (
-						<div key={index} className="choice-item">
+						<li key={index} className="choice-item">
 							<Button variant="primary" onClick={() => handleChoice(choice)}>
 							{choice.text}</Button>
-						</div>
+						</li>
 					))}
-				</div>
+				</ul>
 			</div>
 		</div>
 	);

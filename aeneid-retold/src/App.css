@@ -4,6 +4,11 @@ body {
     pointer-events: none;
 }
 
+.top-container {
+    width: 100%;
+    margin: 0;
+}
+
 #root {
     font-family: "Platypi", serif;
     font-optical-sizing: auto;
@@ -27,16 +32,13 @@ body {
 }
 
 .mid-scene {
-    position: fixed;
-    transform: translateY(-65px);
-
     text-align: center;
     background-color: black;
     color: white;
     width: 100vw;
     height: 110vh;
 
-    padding: 10vh 20vw;
+    padding: 10px 20vw;
     pointer-events: all;
 }
 
@@ -63,15 +65,22 @@ body {
 }
 
 .game {
+    width: 62vw;
+    margin: 0 auto;
+    padding-bottom: 20px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    background-color: rgba(248, 214, 214, 0.9);
+    pointer-events: all;
 }
 
 .history-container {
     display: flex;
     width: 100%;
-    max-height: 50vh;
+    max-height: 47vh;
     flex-direction: column;
     align-items: center;
 
@@ -81,22 +90,21 @@ body {
     margin-top: 15px;
 }
 
-.container {
-    width: 50vw;
-    margin: 0 auto;
+.gameHeader {
     text-align: center;
-    pointer-events: all;
-    background-color: rgba(248, 214, 214, 0.9);
+    padding: 0.8em 0 0.5em;
 
-    padding: 20px 0 30px;
+    background-color: rgb(0, 0, 0);
+    color: white;
 }
 
 .game-container {
     text-align: center;
+    width: 90%;
 }
 
 .choice-container {
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
     padding: 10px 20px 15px;
 
@@ -120,10 +128,11 @@ body {
 }
 
 .choices {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    margin-top: 20px;
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    margin: 20px auto 0;
+    border-collapse: collapse;
 }
 
 .fadeOut{
@@ -137,10 +146,16 @@ body {
 }
 
 .choice-item {
-    display: flex;
-    margin: 3px;
-    flex: 1;
-    justify-content: center;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+
+    padding: 0 5px;
+    height: 100%;
+}
+
+.choice-item button {
+    height: 100% !important;
 }
 
 .storyChoice p {

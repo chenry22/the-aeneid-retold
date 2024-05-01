@@ -19,12 +19,14 @@ const MidScene = ({book, onEnd}) => {
                 <span>{txt.map((content, index) => (
                     <p key={index}><i>{content}</i></p>
                 ))}</span>
+                <br></br>
                 <Button onClick={onEnd}>Continue</Button>
             </div>
         ) : (
             <div className='mid-scene'>
-                <Typewriter completedType={completed} text={txt} charDelay={70} sentenceDelay={500}/>
-                <Button onClick={onEnd}><i>Skip Scene</i></Button>
+                <i><Typewriter completedType={completed} text={txt} charDelay={70} sentenceDelay={500}/></i>
+                <br></br>
+                <Button onClick={onEnd}>Skip Scene</Button>
             </div>
         )}
         </>
