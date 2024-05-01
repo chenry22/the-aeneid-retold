@@ -11,8 +11,12 @@ const Game = () => {
  
     const handleChoice = (choice) => {
         if (choice.nextScenario !== undefined) {
-            history.push({scenario: scenario, choice: choice.text});
-            setScenario(choice.nextScenario);
+            if(choice.nextScenario < 0){
+                setMidScene(true);
+            } else{
+                history.push({scenario: scenario, choice: choice.text});
+                setScenario(choice.nextScenario);
+            }
         }
     };
 
@@ -21,10 +25,6 @@ const Game = () => {
         setScenario(0);
         setBookNum(prev => prev + 1);
         setMidScene(false);
-    }
-
-    const onBookEnd = () => {
-        setMidScene(true);
     }
 
     const AlwaysScrollToBottom = () => {
@@ -46,7 +46,7 @@ const Game = () => {
                     <AlwaysScrollToBottom />
                 </div>
                 <div className='storyChoice'>
-                    <StoryChoice scenario={scenario} onChoice={handleChoice} bookNum={bookNum} bookEnd={onBookEnd}/>
+                    <StoryChoice scenario={scenario} onChoice={handleChoice} bookNum={bookNum}/>
                 </div>
             </div>
         )}

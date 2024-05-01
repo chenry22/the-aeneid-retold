@@ -233,7 +233,7 @@
     "book2": [
         {
             "id": 0,
-            "text": ["Trojan Horse and "],
+            "text": ["After years of war, we thought that we had broken the spirits of the Greeks. They had retreated, leaving nothing but "],
             "choices": [
                 {"text": "Pro Horse", "nextScenario": 1},
                 {"text": "anti-horse", "nextScenario": 1}
