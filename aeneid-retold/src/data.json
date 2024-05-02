@@ -203,7 +203,7 @@
         {
             "id": 21,
             "text": ["Your crew is happy to see you return. You begin to set up camp on the shoreline- it will take some time to repair your damaged ships.",
-                    "Over the next weeks, your progress slowly continues. Your days are spent toiling under the sun, your nights are plagued by dreams and omens.",
+                    "Over the next weeks, your progress slowly continues. Your days are spent toiling under the sun, your nights are plagued by dreams, visions of your past and future.",
                     "On one particularly restless night, you find yourself back within Ilium's walls, at the beginning of the end."],
             "choices": [
                 {"text": "Dream of the Fall of Troy", "nextScenario": -1}
@@ -233,12 +233,120 @@
     "book2": [
         {
             "id": 0,
-            "text": ["After years of war, we thought that we had broken the spirits of the Greeks. They had retreated, leaving nothing but "],
+            "text": ["After years of war, we thought that we had broken the spirits of the Greeks. They had retreated, leaving nothing behind but a large wooden horse.",
+                    "Trojans gathered around the beast- some were ready to accept the gift, others were rightfully skeptical.",
+                    "Laocoon, a priest of Neptune, rushed from the town. \"Trojans, have you lost your minds? No gift of the Greeks can be sincere! They must be hiding in the machine, planning our demise!\"",
+                    "With this proclamation, he picked up a spear and hurled it into the horse. A resounding groan was heard from within."],
             "choices": [
-                {"text": "Pro Horse", "nextScenario": 1},
-                {"text": "anti-horse", "nextScenario": 1}
+                {"text": "Continue", "nextScenario": 1}
+            ]
+        },
+        {
+            "id": 1,
+            "text": ["Surely we would have realized the trap and descended upon the contraption with a violent fury, if it hadn't been for the next phase of the Greek's trick.",
+                    "A captive was led to our group, one apprehended by a group of shepards. We questioned him, asking for his history and his intentions.",
+                    "He introduced himself as Sinon, a Greek who had accompanied Palamedes in the war. He spoke of Palamedes' tension with Ulysses, and how after his friend's death Ulysses had continued to persecute him.",
+                    "He told us how the Greeks, worn out from years of war, had decided to leave, and sent a soldier, Eurypylus, to seek advice from the oracle."],
+            "choices": [
+                {"text": "Continue", "nextScenario": 2}
+            ]
+        },
+        {
+            "id": 2,
+            "text": ["He continued, \"The oracle demanded a sacrifice for a safe return- the life of a Greek soldier. Ulysses went to Calchas, our seer, demanding the name of the man to be sacrificed.\"",
+                    "\"For ten days, Calchas refused to sentence someone to death. But, driven by Ulysses' force, he finally spoke, declaring me to be the gift. A cruel plan by Ulysses, still seeking revenge- they chained me, preparing me for my death, but I broke free, hiding until they sailed away. Now I can never return to my homeland.\"",
+                    "We fell for his lies, freeing him of his binds and asking what he knew of the wooden horse."],
+            "choices": [
+                {"text": "We took pity on him", "nextScenario": 3},
+                {"text": "Still skeptical, we sent him away", "nextScenario": -1}
+            ]
+        },
+        {
+            "id": 3,
+            "text": ["We fell for his lies, freeing him of his binds and asking what he knew of the wooden horse.",
+                    "\"By the eternal fires and sacred Troy, and by the god's ribbons condemning me, it is only right for me to betray the Greeks, to hate them. I will reveal all.\"",
+                    "\"The Greeks relied on the power of Pallas to win this war. After Ulysses and Diomedes' raid on her temple, and the abduction of the Palladium from its shrine, the goddess turned on us, sending divine signs that we were no longer in her favor.\"",
+                    "\"This was why they decided to retreat, in hopes of returning after regathering their godly allies. This offering is meant as an offering to the violated godhead, a gift to Minerva herself, to be brough within your city's walls.\""],
+            "choices": [
+                {"text": "We accepted the horse into our city", "nextScenario": 5},
+                {"text": "We could not shake suspicion, deciding to leave the horse outside", "nextScenario": 4}
+            ]
+        },
+        {
+            "id": 4,
+            "text": ["Despite Sinon's elaborate story, we were still reluctant to bring the huge statue within our city's walls...",
+                    "Then suddenly, two huge serpents emerged from the nearby waters. As we scattered desperately to save ourselves, they moved with intent, targeting Laocoon, the most adament rejector of the horse.",
+                    "In each of their great jaws they clutched one of his young sons, gnawing on their wretched limbs. Laocoon ran to save them, armed with a spear, but was caught between the bodies of the two beasts. They wrapped around him, mercilessly, until his cries of agony faltered.",
+                    "After this brutal display, the creatures slithered over to a statue of Pallas, curling around the goddess' feet and resting there- we could not ignore such an clear message."],
+            "choices": [
+                {"text": "Continue", "nextScenario": 5}
+            ]
+        },
+        {
+            "id": 5,
+            "text": ["So we rolled the huge horse into the city, resting it at the center of our great town. We spent our last day in those great walls celebrating, rejoicing at the end of the war and our triumph over the Greeks. At nightfall, we had all returned homes, and even those stationed at our defenses were cloaked in a deep drowsiness.",
+                    "Oblivious to the start of the final Greek attack, I was visited by a dream. An anguished Hector appeared to me, tears streaming down his face, covered in dust and gore. He was not the proud, powerful leader I remembered, but a defeated, disheveled version of himself, bearing the countless wounds received during his defending of our city.",
+                    "I addressed him sorrowfully and asked him why he appeared to me in such a state. With a deep sigh, he only responded:",
+                    "\"Child of Venus, you must escape this city. The walls are taken, Troy has fallen- the city now trusts its legacy with you. Leave, find some place across the sea and build new walls for our people.\"",
+                    "I awoke to the surrounding roar of battle. Scrambling to the rooftop, I heard the rage of the Greeks flooding our city, and watched fires consume and collapse familiar buildings."],
+            "choices": [
+                {"text": "I had to flee, saving as much as I could", "nextScenario": -1},
+                {"text": "I had to fight- there was still a chance to save the city", "nextScenario": 6}
+            ]
+        },
+        {
+            "id": 6,
+            "text": ["I gathered my weapons and was met at my door by a priest of Phoebus. \"This is the last day of our nation. The horse pours out endless Greek troops, who have filled every corner of our city. Our guards can scarcely survive a single single clash.\"",
+                    "I led my familiar comrades into the greatest fight of their lives. In a frenzy we pressed through hordes of Greeks towards the heart of our city and certain death.",
+                    "We passed through the carnage, generations of our empire slaughtered, bodies scattered all around the city. We stumbled into a troop of Greek soldiers, who mistook us for allies. We swarmed them and killed them in their confusion, stealing their armor in hopes of tricking our enemies.",
+                    "We saw Priam's daughter, the princess Cassandra, dragged out of Minerva's temple. We rushed to help her, forcing our way to the densent parts of the battle."],
+            "choices": [
+                {"text": "Continue", "nextScenario": 7}
+            ]
+        },
+        {
+            "id": 7,
+            "text": ["But now the Greek forces began to overwhelm us, seeing through or new disguises. My men began to fall, but we continued to fight, still hoping to protect our doomed city.",
+                    "Hearing commotion within Priam's palace, my surviving forces ran to help. We saw Trojan forces desperately battling to protect the palace gates, barely keeping the Greek forces at bay. Pyrrhus, Achilles' son, led them, forcing his way into the palace, neither locks nor guards slowing him.",
+                    "The Greeks smashed through the great entrance with a battering ram, streaming into the room with murderous ferocity. They overpowered us, destroying everything and everyone in their wake.",
+                    "Priam, in desperation, strapped on his armor and sword, last used decades before, and rushed to die in the great battle."],
+            "choices": [
+                {"text": "Continue", "nextScenario": 8}
+            ]
+        },
+        {
+            "id": 8,
+            "text": ["He met Queen Hecuba in their courtyard, who stopped him, asking him to protect his family instead. He waited in that courtyard until his son Polites rushed in, chased by Pyrrhus and his bloodlust.",
+                    "Reaching his father's sight, Polites fell, Pyrrhus' inflicted wounds too great for him. Outraged, Priam flung his spear at Pyrrhus, pitifully cast aside by Pyrrhus' bronze shield.",
+                    "Achilles' son dragged the Priam to the courtyard altar, slipping in his own son's blood. Forcing the king onto the altar, Pyrrhus thrust his sword deep into the king's chest, killing him as he watched Troy burn.",
+                    "Once the monarch of an unconquerable empire, his body now lies abandoned on its shore, a headless, nameless thing."],
+            "choices": [
+                {"text": "Continue", "nextScenario": 9}
+            ]
+        },
+        {
+            "id": 9,
+            "text": ["Now I was filled with a profound horror- in the king's savage demise I seemed to see my father. I thought of my wife and son, alone and defenseless in our home.",
+                    "I had to go save them. Looking around for any help, I realized I was completely alone. In their terror, the surviving Trojans had abandoned me, jumping from walls or flinging themselves into the raging fires.",
+                    "Then I noticed a skulking figure, Helen, a Fury for both nations, betraying both the Trojans and the Greeks. I thought to myself, \"Why should she safely return to her homeland, to triumph as a queen? Priam is butchered, Troy is burning- to execute a woman brings no honor, but I must destroy this evil to bring justice for those who have lost their lives.\"",
+                    "Overwhelming fury carried me towards her, until my mother appeared and restrained me. \"My child, give up your hatred of Helen- it is the gods who have doomed Troy. Go to your family, who you have abandoned. If not for my protection, Greek weapons and flames would have already consumed them. I can protect you and guide you to escape from these crumbling walls.\""],
+            "choices": [
+                {"text": "Kill Helen", "nextScenario": -1},
+                {"text": "Spare Helen", "nextScenario": 10}
+            ]
+        },
+        {
+            "id": 10,
+            "text": ["I saw the truth in my mother's message- it was more urgent to save my family than slaughter Paris' helpless wife.",
+                    "Hidden away in a dark mist, I rushed through the collapsing city to my home, "],
+            "choices": [
+                {"text": "Continue", "nextScenario": -1}
             ]
         }
+    ],
+    "mid2": [
+        "Thank you for playing this demo!",
+        "More content will be added soon :)"
     ],
     "book3": [
         {

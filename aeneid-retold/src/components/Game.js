@@ -3,7 +3,7 @@ import StoryChoice from './StoryChoice';
 import StoryHistory from './StoryHistory';
 import MidScene from './MidScene';
 
-const Game = () => {
+const Game = ({endGame}) => {
     const [history, setHistory] = useState([]);
     const [bookNum, setBookNum] = useState(0);
     const [scenario, setScenario] = useState(0);
@@ -12,6 +12,8 @@ const Game = () => {
     const handleChoice = (choice) => {
         if (choice.nextScenario !== undefined) {
             if(choice.nextScenario < 0){
+                setHistory([]);
+                setScenario(0);
                 setMidScene(true);
             } else{
                 history.push({scenario: scenario, choice: choice.text});
@@ -21,8 +23,10 @@ const Game = () => {
     };
 
     const handleMidSceneEnd = () => {
-        setHistory([]);
-        setScenario(0);
+        if(bookNum > 1){
+            endGame();
+        }
+
         setBookNum(prev => prev + 1);
         setMidScene(false);
     }

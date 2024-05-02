@@ -20,6 +20,10 @@ function App() {
     }
   }
 
+  const forceEndGame = () => {
+    setStart(false);
+  }
+
   return (
     <>
     {startGame &&
@@ -37,7 +41,7 @@ function App() {
           <h2>The Aeneid: Retold</h2>
         </div>
         <div className="game">
-          <Game />
+          <Game endGame={forceEndGame}/>
           <Button variant="info" size="sm" onClick={endGame}>Back to Main</Button>
         </div>
       </div>
