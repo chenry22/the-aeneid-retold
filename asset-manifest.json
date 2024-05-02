@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/the-aeneid-retold/static/css/main.f900674b.css",
-    "main.js": "/the-aeneid-retold/static/js/main.cab0e92a.js",
+    "main.js": "/the-aeneid-retold/static/js/main.433b2ac2.js",
     "static/js/453.eb574d11.chunk.js": "/the-aeneid-retold/static/js/453.eb574d11.chunk.js",
     "static/media/blank_map.png": "/the-aeneid-retold/static/media/blank_map.18a5312643d18a5444ef.png",
     "index.html": "/the-aeneid-retold/index.html",
     "main.f900674b.css.map": "/the-aeneid-retold/static/css/main.f900674b.css.map",
-    "main.cab0e92a.js.map": "/the-aeneid-retold/static/js/main.cab0e92a.js.map",
+    "main.433b2ac2.js.map": "/the-aeneid-retold/static/js/main.433b2ac2.js.map",
     "453.eb574d11.chunk.js.map": "/the-aeneid-retold/static/js/453.eb574d11.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f900674b.css",
-    "static/js/main.cab0e92a.js"
+    "static/js/main.433b2ac2.js"
   ]
 }
